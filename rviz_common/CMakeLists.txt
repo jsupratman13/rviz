@@ -172,6 +172,8 @@ set(rviz_common_source_files
   src/rviz_common/properties/file_picker_property.cpp
   src/rviz_common/properties/float_edit.cpp
   src/rviz_common/properties/float_property.cpp
+  src/rviz_common/properties/folder_picker.cpp
+  src/rviz_common/properties/folder_picker_property.cpp
   src/rviz_common/properties/grouped_checkbox_property.cpp
   src/rviz_common/properties/grouped_checkbox_property_group.cpp
   src/rviz_common/properties/int_property.cpp
