@@ -35,6 +35,8 @@
 #include "rviz_common/properties/string_property.hpp"
 #include "rviz_common/visibility_control.hpp"
 
+#include <QFileDialog>
+
 namespace rviz_common
 {
 namespace properties
@@ -48,9 +50,13 @@ public:
     const QString & description = QString(),
     Property * parent = nullptr,
     const char * changed_slot = nullptr,
-    QObject * receiver = nullptr);
+    QObject * receiver = nullptr,
+    QFileDialog::FileMode mode = QFileDialog::AnyFile);
 
   QWidget * createEditor(QWidget * parent, const QStyleOptionViewItem & option) override;
+
+private:
+  QFileDialog::FileMode mode_;
 };
 
 }  // namespace properties

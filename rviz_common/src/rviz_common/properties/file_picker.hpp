@@ -36,6 +36,8 @@
 #include "rviz_common/properties/string_property.hpp"
 #include "rviz_common/visibility_control.hpp"
 
+#include <QFileDialog>
+
 namespace rviz_common
 {
 namespace properties
@@ -46,13 +48,15 @@ class FilePicker : public LineEditWithButton
 public:
   explicit FilePicker(
     StringProperty * file_name_property = nullptr,
-    QWidget * parent = nullptr);
+    QWidget * parent = nullptr,
+    QFileDialog::FileMode mode = QFileDialog::AnyFile);
 
 protected:
   void onButtonClick() override;
 
 private:
   StringProperty * file_name_property_;
+  QFileDialog::FileMode mode_;
 };
 
 }  // namespace properties
